@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, constructor){
+                this.name = name;
+                this.constructor = constructor;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(newName) {
+                this.name = newName;
+            }
+            walk(value) {
+                return value; 
+            }
+        }
+        class Progammmer extends Person {
+            constructor(name, constructor, progammingLanguage){
+                super(name, constructor)
+                this.progammingLanguage = progammingLanguage;
+            }
+            getProGammingLanguage() {
+                return this.progammingLanguage;
+            }
+            setProGammingLanguage(newValue) {
+                return this.progammingLanguage = newValue;
+            }
+            writeCode() {
+                return 'write code by ' + this.progammingLanguage;
+            }
+        }
+    let person = new Person('Men','abc');
+    let long = new Progammmer('Long','xyz','Java');
+    console.log(long.getProGammingLanguage());
+    console.log(long.setProGammingLanguage('JavaScript'));
+    console.log(long.writeCode());
+    </script>
+</body>
+</html>

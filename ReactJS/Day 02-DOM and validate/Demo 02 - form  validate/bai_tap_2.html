@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkAccount(obj){
+            regexp = /^[_a-z0-9]{6,}$/;
+            if(regexp.test(obj)){
+                console.log('Tai khoản hợp lệ');
+            } else {
+                console.log('Tài khoản không hợp lệ');
+            }
+        }
+        checkAccount('123abc_');
+        checkAccount('_abc123');
+        checkAccount('______');
+        checkAccount('123456');
+        checkAccount('abcdefg');
+        checkAccount('.@');
+        checkAccount('12345');
+        checkAccount('1234_');
+        checkAccount('abcde');
+    </script>
+</body>
+</html>

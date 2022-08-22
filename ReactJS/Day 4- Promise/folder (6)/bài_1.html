@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Chương trình sử dụng Promise</title>
+</head>
+<body>
+    <script>
+        const count = true;
+        var countValue = new Promise(function(resolve,reject){
+            if(count){
+                resolve('There are a count value');
+            } else {
+                reject('The are not count value');
+            }
+        })
+        console.log(countValue);
+    </script>
+</body>
+</html>

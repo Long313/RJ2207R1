@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkAccount(input) {
+            var regexp = /^[_a-z0-9]{6,}$/;
+            console.log(typeof regexp);
+            if(regexp.test(input)){
+                console.log('Account hợp lệ');
+            } else {
+                console.log('Account không hợp lê');
+            }
+        }
+
+        checkAccount('123abc_');
+        checkAccount('_abc123');
+        checkAccount('______');
+        checkAccount('123456');
+        checkAccount('abcdefg')
+        checkAccount('.@');
+        checkAccount('12345');
+        checkAccount('1234_');
+        checkAccount('abcde');
+    </script>
+</body>
+</html>

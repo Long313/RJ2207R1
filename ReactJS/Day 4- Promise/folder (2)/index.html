@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        #result {
+            margin-top: 10px;
+            width: 20%;
+            height: 400px;
+            border: 2px solid blue;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WEATHER FORECAST</h1>
+    <div>
+        <input type="text" id="input" pattern="[a-zA-Z]*" onkeyup="getCityName(this)" placeholder="Enter City">
+        <button id="search-btn">Search</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        var apiKey = 'bd6b73156ede4aed2bb267e77ee5b4ae';
+        var input = document.getElementById('input');
+        var searchBtn = document.getElementById('search-btn');
+        var output = document.getElementById('result');
+        let cityName;
+        function getCityName(obj){
+            cityName = obj.value;
+            let weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+            let html = '';
+            searchBtn.onclick = function(){
+                var result = axios.get(weatherApi);
+                result
+                    .then(function(reponse){
+                        console.log(reponse.data.main);
+                        var temperatureMax = Math.floor(reponse.data.main.temp_max - 273.15);
+                        var temperatureMin= Math.floor(reponse.data.main.temp_min - 273.15);
+                        html = `<p>Tên thành phố: ${reponse.data.name}</p>
+                                <p>Độ ẩm: ${reponse.data.main.humidity}</p>
+                                <p>Sức gió: ${reponse.data.main.pressure}</p>
+                                <p>Mực nước biển: ${reponse.data.main.sea_level}</p>
+                                <p>Nhiệt độ tối đa: ${temperatureMax} độ C</p>
+                                <p>Nhiệt độ tối thiểu: ${temperatureMin} độ C</p>`
+                                
+                        output.innerHTML = html;
+                    })
+            }
+        }
+    </script>
+</body>
+</html>

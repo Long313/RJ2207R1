@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaning Promise với then()</title>
+</head>
+<body>
+    <script>
+        let countValue = new Promise(function(resolve,reject){
+            resolve('Promise resolved')
+        })
+        countValue
+            .then(function succesValue(result){
+                console.log(result);
+            })
+            .then(function succesValue1(){
+                console.log('You can call multil function this way');
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    background-color: #000;
+}
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.action-block {
+    display: flex;
+    justify-content: center;
+}
+
+.border-radius {
+    border-radius: 2px;
+    margin-right: 2px;
+}   
+
+#input {
+
+}
+.btn {
+    width: 120px;
+    height: 30px;
+    color: #fff
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:focus {
+    border-color: blue;
+}
+
+.search-btn {
+    background-color: rgb(41, 40, 40);
+}
+.output {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.remove-btn {
+    background-color: rgb(202, 34, 34);
+}
