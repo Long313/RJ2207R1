@@ -11,9 +11,9 @@ import BMICaculator from './components/BMICaculator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<FunctionComponent firstNumber={5} secondNumber={2} />);
 // Bai tap 1
-// root.render(<Alert text="Cảnh báo! Tài nguyên bạn vừa truy cập không tồn tại.
-// " className="alert alert-warning" role="alert"/>)
+root.render(<Alert text="Cảnh báo! Tài nguyên bạn vừa truy cập không tồn tại.
+" className="alert alert-warning" role="alert"/>)
 
 // Bai tap 2
-root.render(<StudentInfor />)
+// root.render(<StudentInfor />)
 // root.render(<BMICaculator/>)
