@@ -1,0 +1,13 @@
+table {
+  border: 1px solid black;
+  margin: 100px auto;
+  width: 50%;
+}
+tr:nth-child(odd) {
+  background-color: #ccc;
+}
+tr,th {
+  background-color: #fff;
+}
+
+
