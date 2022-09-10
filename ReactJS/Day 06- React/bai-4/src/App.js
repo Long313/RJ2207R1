@@ -37,7 +37,7 @@ function App() {
         <button type="submit" className="btn btn-primary w-100">
           Sign in
         </button>
-        <p className="mt-2">2017-2021</p>
+        <p className="mt-2">© 2017-2021</p>
       </form>
     </div>
   );

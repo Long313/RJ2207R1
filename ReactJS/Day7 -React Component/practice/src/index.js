@@ -15,5 +15,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // " className="alert alert-warning" role="alert"/>)
 
 // Bai tap 2
-root.render(<StudentInfor />)
-// root.render(<BMICaculator/>)
+// root.render(<StudentInfor />)
+root.render(<BMICaculator/>)

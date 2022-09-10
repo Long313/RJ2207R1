@@ -3,12 +3,14 @@ class BMICaculator extends React.Component {
   constructor(props) {
     super(props);
    }
-  calculator() {
+  input () {
     const inputHeight= document.getElementsByClassName('height');
     const inputWeight= document.getElementsByClassName('weight');
-    const total = document.getElementsByClassName('total');
     const height = parseFloat(inputHeight.value);
     const weight = parseFloat(inputWeight.value);
+  }
+  calculator() {
+    const total = document.getElementsByClassName('total');
     const result = weight/(height*height)/10000;
     total.innerText = result;
   }
