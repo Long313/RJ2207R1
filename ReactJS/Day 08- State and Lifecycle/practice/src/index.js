@@ -15,8 +15,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<ChangeBackgroudColor/>)
 // root.render(<App/>)
 // root.render(<LoginAndLogOut/>);
-root.render(<ComponentExpant/>)
-// root.render(<Calculator />)
+// root.render(<ComponentExpant/>)
+root.render(<Calculator />)
 // root.render(<Form/>)
 // root.render(<TodoList/>);
 // root.render(<StudentManagement/>);
