@@ -1,0 +1,14 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import SignUpForm from './Components/SignUpForm';
+import ValidateFormSignUp from './Components/ValidateFormSignUp';
+import ValidateFormLogin from './Components/ValidateFormLogin';
+import { ValidateFormWithFormik } from './Components/ValidateFormWithFormik';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<SignUpForm />);
+// root.render(<ValidateFormSignUp />);
+// root.render(<ValidateFormLogin/>);
+root.render(<ValidateFormWithFormik/>);
